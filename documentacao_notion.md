@@ -21,7 +21,6 @@ Em instituições de grande porte, é comum que a equipe técnica perca o rastre
 O banco de dados relacional foi projetado para garantir máxima integridade referencial, escalabilidade e evitar redundância de dados. O projeto final é composto por **7 tabelas**, superando o requisito mínimo de 5 tabelas, graças à aplicação de técnicas de **Normalização de Banco de Dados**.
 
 ### O Diagrama Entidade-Relacionamento (DER)
-*(Insira a imagem do seu Diagrama aqui)*
 
 A modelagem visual (Diagrama Entidade-Relacionamento) foi desenvolvida utilizando a 3ª Forma Normal (3FN). Nela, mapeamos a estrutura física do Bloco B através das tabelas de `ambientes` e `racks`. Para evitar anomalias de atualização e garantir consistência na gestão dos ativos, os atributos dos equipamentos foram isolados em tabelas satélites (`categorias_equipamento` e `fabricantes`), que se relacionam de forma (1:N) com a tabela central `equipamentos_rack`. Por fim, implementamos a tabela de `manutencoes` para criar um histórico rastreável das intervenções feitas pelos `tecnicos` na infraestrutura.
 
